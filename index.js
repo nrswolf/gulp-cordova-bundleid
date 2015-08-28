@@ -2,10 +2,10 @@
 * Author: Michael Taylor
 * www.michaeltaylor3d.com
 * 
-* usage: 
-* put 
-*    gulp.task('cordova', require('gulp-cordova-bump'));
-* into your gulpfile
+* Usage: 
+* Add the following to your Gulpfile: 
+* 
+* gulp.task('cordova', require('gulp-cordova-bundleid'));
 */
 
 'use strict';
@@ -22,7 +22,7 @@ var $ = require('gulp-load-plugins')();
 function Bundle() {}
 
 Bundle.prototype.run = function() {
-  } else if (args.bundle) {
+  if (args.bundle) {
     this.set(args.bundle);
   } else {
     this.help();
